@@ -12,21 +12,15 @@ Node.js 版 MTProto Proxy，支持 Telegram 直连 DC 和 Middle Proxy 两种转
 
 * 支持 IPv4 / IPv6 监听，直连模式会优先按服务器网络情况选择线路
 
-* 支持多进程 worker、连接池、快速转发模式
-
-* 支持 `/clients` 页面查看当前连接、DC、SNI、流量和消息数
-
-* 支持定时重启 worker，默认时间为每天 `00:03`
-
 ### 文件说明
 
 * `main.js`：主程序，包含 MTProto Proxy 服务、worker 管理、链接生成和统计页面
 
-* `config.js`：配置文件，填写端口、用户密钥、TLS 域名、广告 tag、worker 数量等
+* `config.json`：配置文件，填写端口、用户密钥、TLS 域名、广告 tag
 
 ### 快速使用
 
-1. 修改 `config.js`
+1. 修改 `config.json`
 
 2. 设置 `PORT`，或使用平台提供的 `PORT` / `SERVER_PORT`
 
@@ -52,36 +46,6 @@ node main.js
 
 `AD_TAG`：从 `@MTProxybot` 获取的广告 tag。不使用广告时保持 32 个 `0`。
 
-`USE_MIDDLE_PROXY`：是否强制使用 Middle Proxy。不设置时会根据 `AD_TAG` 自动判断。
-
-`NUM_CPUS`：worker 数量。
-
-`POOL_SIZE`：每个 DC 的连接池大小。
-
-`FAST_MODE`：快速转发模式，默认启用。
-
-`PREFER_IPV6`：是否优先使用 IPv6。
-
-`AUTO_RESTART`：是否启用定时重启 worker。
-
-`AUTO_RESTART_TIME`：定时重启时间，默认 `00:03`。
-
-### 环境变量
-
-以下环境变量会覆盖 `config.js` 中的同名配置：
-
-* `PORT` / `SERVER_PORT`
-* `PUBLIC_HOST`
-* `SECRETS`
-* `ADTAG`
-* `USE_MIDDLE_PROXY`
-* `NUM_CPUS`
-* `POOL_SIZE`
-* `FAST_MODE`
-* `PREFER_IPV6`
-* `TLS_DOMAIN`
-* `AUTO_RESTART`
-* `AUTO_RESTART_TIME`
 
 ### 安全提醒
 
