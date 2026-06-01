@@ -1,0 +1,13 @@
+{
+	"PORT": 443,
+	"USERS": {
+		"tg": "0123456789abcdef0123456789abcdef"
+	},
+	"MODES": {
+		"classic": false,
+		"secure": false,
+		"tls": true
+	},
+	"TLS_DOMAIN": "www.cloudflare.com",
+	"AD_TAG": ""
+}
