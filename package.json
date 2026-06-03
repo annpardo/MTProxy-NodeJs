@@ -1,0 +1,16 @@
+{
+  "name": "mtproto-proxy-local",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local MTProto proxy runner.",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "check": "node --check main.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {}
+}
